@@ -42,7 +42,7 @@ int main()
             break;
 
         case 2:
-
+            cout << "Area is: " << areaOfCircle(2.0) << endl << endl;
             break;
 
         case 3:
@@ -69,7 +69,9 @@ double sumTwoNumbers(double num1, double num2) {
 }
 
 // Returns the area of a circle using given radius
-double areaOfCircle();
+double areaOfCircle(double radius) {
+    return PI * radius * radius;
+}
 
 // Returns circumference of a cirlce using given radius
 double circumferenceOfCircle();
