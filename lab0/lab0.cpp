@@ -4,6 +4,9 @@
 #include <iostream>
 using namespace std;
 
+// Global variables
+const double PI = 3.14;
+
 // Function prototypes
 double sumTwoNumbers(double num1, double num2);
 double areaOfCircle(double radius);
