@@ -70,3 +70,6 @@ double sumTwoNumbers(double num1, double num2) {
 
 // Returns the area of a circle using given radius
 double areaOfCircle();
+
+// Returns circumference of a cirlce using given radius
+double circumferenceOfCircle();
