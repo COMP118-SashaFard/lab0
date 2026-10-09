@@ -7,6 +7,8 @@ using namespace std;
 // Function prototypes
 double sumTwoNumbers(double num1, double num2);
 double areaOfCircle(double radius);
+double circumferenceOfCircle(double radius);
+double priceIncludingVAT(double price, int vat);
 
 // Starting point of programm.
 int main()
