@@ -73,3 +73,6 @@ double areaOfCircle();
 
 // Returns circumference of a cirlce using given radius
 double circumferenceOfCircle();
+
+// Returns price including VAT using given price and VAT rate
+double priceIncludingVAT();
