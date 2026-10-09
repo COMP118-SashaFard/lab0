@@ -65,3 +65,5 @@ double sumTwoNumbers(double num1, double num2) {
     return num1 + num2;
 }
 
+// Returns the area of a circle using given radius
+double areaOfCircle();
