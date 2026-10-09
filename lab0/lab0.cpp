@@ -70,6 +70,7 @@ double sumTwoNumbers(double num1, double num2) {
 
 // Returns the area of a circle using given radius
 // Returns -1 in case if given radius in negative
+// @todo make it stronger
 double areaOfCircle(double radius) {
     double area = -1;
 
