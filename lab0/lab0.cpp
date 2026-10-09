@@ -1,5 +1,5 @@
 // lab0.cpp : This file contais a small math programm.
-// Author: Sasha Fard @ssfard
+// Author: Sasha Fard @ssfard test
 
 #include <iostream>
 using namespace std;
