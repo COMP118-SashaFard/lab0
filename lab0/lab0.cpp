@@ -6,6 +6,7 @@ using namespace std;
 
 // Function prototypes
 double sumTwoNumbers(double num1, double num2);
+double areaOfCircle(double radius);
 
 // Starting point of programm.
 int main()
