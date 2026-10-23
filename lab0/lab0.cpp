@@ -162,7 +162,7 @@ double circumferenceOfCircle(double radius) {
  * @return The price including VAT.
  * @todo make the code more robust.
  */
-double priceIncludingVAT(double price, int vat) {
+double priceIncludingVAT(double price, double vat) {
 
     double total = price + (price / 100 * vat);
     return total;
