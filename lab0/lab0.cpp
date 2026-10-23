@@ -46,6 +46,7 @@ int main()
             break;
 
         case 3:
+            cout << "Circumference is: " << circumferenceOfCircle(2) << endl << endl;
 
             break;
 
@@ -81,7 +82,10 @@ double areaOfCircle(double radius) {
 }
 
 // Returns circumference of a cirlce using given radius
-double circumferenceOfCircle();
+double circumferenceOfCircle(double radius) {
+    double circumference = 2 * PI * radius;
+    return circumference;
+}
 
 // Returns price including VAT using given price and VAT rate
 double priceIncludingVAT();
