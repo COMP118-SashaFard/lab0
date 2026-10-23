@@ -30,7 +30,8 @@ double priceIncludingVAT(double price, int vat);
  */
 int main()
 {
-    int choice;
+    int user_choice;
+    double user_entry_1 = 0, user_entry_2 = 0;
 
     do {
 
