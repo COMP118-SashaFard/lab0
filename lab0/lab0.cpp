@@ -27,6 +27,8 @@ double areaOfCircle(double radius);
 double circumferenceOfCircle(double radius);
 double priceIncludingVAT(double price, int vat);
 
+int readInt();
+
 /**
  * @brief Starting point of the program.
  */
@@ -45,7 +47,8 @@ int main()
         cout << "4) Calculate price with VAT" << endl;
         cout << "Enter choice: ";
 
-        cin >> user_choice;
+        user_choice = readInt();
+
         cout << endl; // makes it pretty.
 
         switch (user_choice) {
@@ -59,12 +62,12 @@ int main()
 
             cout << "Enter number 1: ";
             cin >> user_entry_1;
-
+                if(!cin)
             cout << "Enter number 2: ";
             cin >> user_entry_2;
-
-            cout << "Sum is: " << sumTwoNumbers(user_entry_1,user_entry_2) << endl << endl; // two endl for pretty reasons.
-
+ 
+                cout << "Sum is: " << sumTwoNumbers(user_entry_1, user_entry_2) << endl << endl; // two endl for pretty reasons.
+           
             break;
 
         case 2:
@@ -138,4 +141,19 @@ double priceIncludingVAT(double price, int vat) {
 
     double total = price + (price / 100 * vat);
     return total;
+}
+
+/**
+ * @brief Reads an int from cin, retrying until a valid number is entered.
+ * @return The number the user typed.
+ */
+int readInt()
+{
+    int value;
+    while (!(cin >> value)) {
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Not a number, try again: ";
+    }
+    return value;
 }
