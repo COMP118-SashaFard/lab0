@@ -136,12 +136,12 @@ double areaOfCircle(double radius) {
 
 /**
  * @brief Returns the circumference of a circle using the given radius.
- * @param radius The radius of the circle.
+ * @param radius The radius of the circle. Must be >= 0.
  * @return The circumference of the circle.
  */
 double circumferenceOfCircle(double radius) {
-    double circumference = 2 * PI * radius;
-    return circumference;
+    assert(radius >= 0);
+    return 2 * PI * radius;
 }
 
 /**
