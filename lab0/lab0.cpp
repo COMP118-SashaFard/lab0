@@ -28,6 +28,7 @@ double priceIncludingVAT(double price, double vat);
 
 int readInt();
 double readDouble();
+double readNonNegativeDouble();
 
 
 /**
@@ -97,17 +98,14 @@ int main()
             break;
 
         case 4:
-
-            user_entry_2 = 0; user_entry_1 = 0;
-
             cout << "Enter price without VAT: ";
-            user_entry_1 = readDouble();
+            user_entry_1 = readNonNegativeDouble();   // price also shouldn't be negative — see note
 
             cout << "Enter VAT: ";
-            user_entry_2 = readDouble();
+            user_entry_2 = readNonNegativeDouble();
 
-            cout << "Price with VAT is: " << priceIncludingVAT(user_entry_1,user_entry_2) << endl << endl;
-
+            cout << "Price with VAT is: "
+                << priceIncludingVAT(user_entry_1, user_entry_2) << endl << endl;
             break;
 
         default:
@@ -196,4 +194,21 @@ double readDouble()
         cout << "Not a number, try again: ";
     }
     return value;
+}
+
+/**
+ * @brief Reads a non-negative double from cin, retrying until valid.
+ * @return The number the user typed.
+ */
+double readNonNegativeDouble()
+{
+    double value;
+    while (true) {
+        if (cin >> value && value >= 0) {
+            return value;
+        }
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Invalid, enter a non-negative number: ";
+    }
 }
