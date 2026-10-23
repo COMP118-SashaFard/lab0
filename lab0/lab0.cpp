@@ -37,7 +37,7 @@ double readNonNegativeDouble();
 int main()
 {
     int user_choice;
-    double user_entry_1 = 0, user_entry_2 = 0;
+    double user_entry_1, user_entry_2;
 
     do {
 
@@ -61,8 +61,6 @@ int main()
 
         case 1:
 
-            user_entry_1 = 0, user_entry_2 = 0;
-
             cout << "Enter two numbers:" << endl;
 
             cout << "Enter number 1: ";
@@ -76,8 +74,6 @@ int main()
             break;
 
         case 2:
-
-            user_entry_1 = 0;
             
             cout << "Enter radius: ";
             user_entry_1 = readDouble();
@@ -88,8 +84,6 @@ int main()
 
         case 3:
 
-            user_entry_1 = 0;
-
             cout << "Enter radius: ";
             user_entry_1 = readDouble();
 
@@ -98,8 +92,9 @@ int main()
             break;
 
         case 4:
+
             cout << "Enter price without VAT: ";
-            user_entry_1 = readNonNegativeDouble();   // price also shouldn't be negative — see note
+            user_entry_1 = readNonNegativeDouble();   
 
             cout << "Enter VAT: ";
             user_entry_2 = readNonNegativeDouble();
