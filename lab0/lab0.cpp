@@ -24,7 +24,7 @@ const double PI = 3.14;
 double sumTwoNumbers(double num1, double num2);
 double areaOfCircle(double radius);
 double circumferenceOfCircle(double radius);
-double priceIncludingVAT(double price, int vat);
+double priceIncludingVAT(double price, double vat);
 
 int readInt();
 double readDouble();
