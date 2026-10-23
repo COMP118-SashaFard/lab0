@@ -55,11 +55,21 @@ int main()
             break;
 
         case 1:
-            cout << "Sum is: " << sumTwoNumbers(2, 3) << endl << endl; // two endl for pretty reasons.
+            cout << "Enter two numbers:" << endl;
+
+            cout << "Enter number 1: ";
+            cin >> user_entry_1;
+
+            cout << "Enter number 2: ";
+            cin >> user_entry_2;
+
+            cout << "Sum is: " << sumTwoNumbers(user_entry_1,user_entry_2) << endl << endl; // two endl for pretty reasons.
+
             break;
 
         case 2:
             cout << "Area is: " << areaOfCircle(-2.0) << endl << endl;
+
             break;
 
         case 3:
