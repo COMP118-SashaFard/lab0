@@ -1,5 +1,16 @@
-// lab0.cpp : This file contais a small math programm.
-// Author: Sasha Fard @ssfard test
+/**
+ * @file lab0.cpp
+ * @brief Lab 0 for Software Development II
+ * 
+ * @details A math program calculating the sum of two numbers, the area of a
+ *          circle given its radius, the circumference given its radius, and
+ *          a price including VAT given the price and VAT.
+ *
+ * @author Sasha Fard
+ * @version 0.1
+ * @date 23.10.2026
+ * @copyright University of Nicosia.
+ */
 
 #include <iostream>
 using namespace std;
