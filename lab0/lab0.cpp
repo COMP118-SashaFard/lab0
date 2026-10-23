@@ -19,7 +19,6 @@ using namespace std;
 
 /** @brief Constant values */
 const double PI = 3.14;
-const int VAT = 19;
 
 // Function prototypes
 double sumTwoNumbers(double num1, double num2);
@@ -28,6 +27,8 @@ double circumferenceOfCircle(double radius);
 double priceIncludingVAT(double price, int vat);
 
 int readInt();
+double readDouble();
+
 
 /**
  * @brief Starting point of the program.
@@ -58,30 +59,54 @@ int main()
             break;
 
         case 1:
+
+            user_entry_1 = 0, user_entry_2 = 0;
+
             cout << "Enter two numbers:" << endl;
 
             cout << "Enter number 1: ";
-            cin >> user_entry_1;
-                if(!cin)
+            user_entry_1 = readDouble();
+                
             cout << "Enter number 2: ";
-            cin >> user_entry_2;
+            user_entry_2 = readDouble();
  
                 cout << "Sum is: " << sumTwoNumbers(user_entry_1, user_entry_2) << endl << endl; // two endl for pretty reasons.
            
             break;
 
         case 2:
-            cout << "Area is: " << areaOfCircle(-2.0) << endl << endl;
+
+            user_entry_1 = 0;
+            
+            cout << "Enter radius: ";
+            user_entry_1 = readDouble();
+
+            cout << "Area is: " << areaOfCircle(user_entry_1) << endl << endl;
 
             break;
 
         case 3:
-            cout << "Circumference is: " << circumferenceOfCircle(2) << endl << endl;
+
+            user_entry_1 = 0;
+
+            cout << "Enter radius: ";
+            user_entry_1 = readDouble();
+
+            cout << "Circumference is: " << circumferenceOfCircle(user_entry_1) << endl << endl;
 
             break;
 
         case 4:
-            cout << "Price with VAT is: " << priceIncludingVAT(2,VAT) << endl << endl;
+
+            user_entry_2 = 0; user_entry_1 = 0;
+
+            cout << "Enter price without VAT: ";
+            user_entry_1 = readDouble();
+
+            cout << "Enter VAT: ";
+            user_entry_2 = readDouble();
+
+            cout << "Price with VAT is: " << priceIncludingVAT(user_entry_1,user_entry_2) << endl << endl;
 
             break;
 
@@ -150,6 +175,21 @@ double priceIncludingVAT(double price, int vat) {
 int readInt()
 {
     int value;
+    while (!(cin >> value)) {
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Not a number, try again: ";
+    }
+    return value;
+}
+
+/**
+* @brief Reads a double from cin, retrying until a valid number is entered.
+* @return The number the user typed.
+*/
+double readDouble()
+{
+    double value;
     while (!(cin >> value)) {
         cin.clear();
         cin.ignore(10000, '\n');
