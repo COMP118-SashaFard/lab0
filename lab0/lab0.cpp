@@ -15,8 +15,9 @@
 #include <iostream>
 using namespace std;
 
-/** @brief Constant value of pi. */
+/** @brief Constant values */
 const double PI = 3.14;
+const int VAT = 19;
 
 // Function prototypes
 double sumTwoNumbers(double num1, double num2);
@@ -64,6 +65,7 @@ int main()
             break;
 
         case 4:
+            cout << "Price with VAT is: " << priceIncludingVAT(2,VAT) << endl << endl;
 
             break;
 
@@ -117,5 +119,10 @@ double circumferenceOfCircle(double radius) {
  * @param price The base price.
  * @param vat The VAT rate (e.g. 19 for 19%).
  * @return The price including VAT.
+ * @todo make the code more robust.
  */
-double priceIncludingVAT();
+double priceIncludingVAT(double price, int vat) {
+
+    double total = price + (price / 100 * vat);
+    return total;
+}
