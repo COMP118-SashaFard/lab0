@@ -146,15 +146,14 @@ double circumferenceOfCircle(double radius) {
 
 /**
  * @brief Returns the price including VAT using the given price and VAT rate.
- * @param price The base price.
- * @param vat The VAT rate (e.g. 19 for 19%).
+ * @param price The base price. Must be >= 0.
+ * @param vat The VAT rate as a percentage (e.g. 19 for 19%). Must be >= 0.
  * @return The price including VAT.
- * @todo make the code more robust.
  */
 double priceIncludingVAT(double price, double vat) {
-
-    double total = price + (price / 100 * vat);
-    return total;
+    assert(price >= 0);
+    assert(vat >= 0);
+    return price + (price / 100 * vat);
 }
 
 /**
