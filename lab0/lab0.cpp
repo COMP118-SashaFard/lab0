@@ -1,7 +1,7 @@
 /**
  * @file lab0.cpp
  * @brief Lab 0 for Software Development II
- * 
+ *
  * @details A math program calculating the sum of two numbers, the area of a
  *          circle given its radius, the circumference given its radius, and
  *          a price including VAT given the price and VAT.
@@ -15,7 +15,7 @@
 #include <iostream>
 using namespace std;
 
-// Global variables
+/** @brief Constant value of pi. */
 const double PI = 3.14;
 
 // Function prototypes
@@ -24,14 +24,16 @@ double areaOfCircle(double radius);
 double circumferenceOfCircle(double radius);
 double priceIncludingVAT(double price, int vat);
 
-// Starting point of programm.
+/**
+ * @brief Starting point of the program.
+ */
 int main()
 {
     int choice;
 
     do {
 
-        // Menu
+        // Displays the menu
         cout << "0) Exit" << endl;
         cout << "1) Sum two numbers" << endl;
         cout << "2) Calculate the area of a circle" << endl;
@@ -45,7 +47,7 @@ int main()
         switch (choice) {
 
         case 0:
-            // @todo choice == 0 means exit programm.
+            /// @todo choice == 0 means exit program.
             break;
 
         case 1:
@@ -70,19 +72,27 @@ int main()
             break;
         }
 
-    } while ( choice != 0);
+    } while (choice != 0);
 
     return 0;
 }
 
-// Returns the sum of two given numbers
+/**
+ * @brief Returns the sum of two given numbers.
+ * @param num1 The first number.
+ * @param num2 The second number.
+ * @return The sum of @p num1 and @p num2.
+ */
 double sumTwoNumbers(double num1, double num2) {
     return num1 + num2;
 }
 
-// Returns the area of a circle using given radius
-// Returns -1 in case if given radius in negative
-// @todo make it stronger
+/**
+ * @brief Returns the area of a circle using the given radius.
+ * @param radius The radius of the circle.
+ * @return The area of the circle, or -1 if @p radius is negative.
+ * @todo Make the function more robust.
+ */
 double areaOfCircle(double radius) {
     double area = -1;
 
@@ -92,11 +102,20 @@ double areaOfCircle(double radius) {
     return area;
 }
 
-// Returns circumference of a cirlce using given radius
+/**
+ * @brief Returns the circumference of a circle using the given radius.
+ * @param radius The radius of the circle.
+ * @return The circumference of the circle.
+ */
 double circumferenceOfCircle(double radius) {
     double circumference = 2 * PI * radius;
     return circumference;
 }
 
-// Returns price including VAT using given price and VAT rate
+/**
+ * @brief Returns the price including VAT using the given price and VAT rate.
+ * @param price The base price.
+ * @param vat The VAT rate (e.g. 19 for 19%).
+ * @return The price including VAT.
+ */
 double priceIncludingVAT();
