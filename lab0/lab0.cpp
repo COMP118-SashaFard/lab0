@@ -43,10 +43,10 @@ int main()
         cout << "4) Calculate price with VAT" << endl;
         cout << "Enter choice: ";
 
-        cin >> choice;
+        cin >> user_choice;
         cout << endl; // makes it pretty.
 
-        switch (choice) {
+        switch (user_choice) {
 
         case 0:
             /// @todo choice == 0 means exit program.
@@ -75,7 +75,7 @@ int main()
             break;
         }
 
-    } while (choice != 0);
+    } while (user_choice != 0);
 
     return 0;
 }
