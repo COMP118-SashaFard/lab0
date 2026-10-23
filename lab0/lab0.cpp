@@ -124,15 +124,14 @@ double sumTwoNumbers(double num1, double num2) {
 
 /**
  * @brief Returns the area of a circle using the given radius.
- * @param radius The radius of the circle.
+ * @param radius The radius of the circle. Must be >= 0.
  * @return The area of the circle.
  */
 double areaOfCircle(double radius) {
-    double area;
 
-        area = PI * radius * radius;
+    assert(radius >= 0);
 
-    return area;
+    return PI * radius * radius;
 }
 
 /**
