@@ -74,10 +74,9 @@ int main()
             break;
 
         case 2:
-            
-            cout << "Enter radius: ";
-            user_entry_1 = readDouble();
 
+            cout << "Enter radius: ";
+            user_entry_1 = readNonNegativeDouble();   
             cout << "Area is: " << areaOfCircle(user_entry_1) << endl << endl;
 
             break;
@@ -126,15 +125,13 @@ double sumTwoNumbers(double num1, double num2) {
 /**
  * @brief Returns the area of a circle using the given radius.
  * @param radius The radius of the circle.
- * @return The area of the circle, or -1 if @p radius is negative.
- * @todo Make the function more robust.
+ * @return The area of the circle.
  */
 double areaOfCircle(double radius) {
-    double area = -1;
+    double area;
 
-    if (radius > 0) {
         area = PI * radius * radius;
-    }
+
     return area;
 }
 
