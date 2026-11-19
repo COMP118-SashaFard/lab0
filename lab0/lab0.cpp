@@ -56,7 +56,7 @@ int main()
         switch (user_choice) {
 
         case 0:
-            /// @todo choice == 0 means exit program.
+            cout << "Goodbye!" << endl;
             break;
 
         case 1:
