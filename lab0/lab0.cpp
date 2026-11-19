@@ -84,7 +84,7 @@ int main()
         case 3:
 
             cout << "Enter radius: ";
-            user_entry_1 = readDouble();
+            user_entry_1 = readNonNegativeDouble();
 
             cout << "Circumference is: " << circumferenceOfCircle(user_entry_1) << endl << endl;
 
