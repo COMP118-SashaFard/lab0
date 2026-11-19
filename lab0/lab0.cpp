@@ -128,10 +128,10 @@ double sumTwoNumbers(double num1, double num2) {
  * @return The area of the circle.
  */
 double areaOfCircle(double radius) {
-
     assert(radius >= 0);
-
-    return PI * radius * radius;
+    double area = PI * radius * radius;
+    assert(area >= 0);
+    return area;
 }
 
 /**
@@ -141,7 +141,9 @@ double areaOfCircle(double radius) {
  */
 double circumferenceOfCircle(double radius) {
     assert(radius >= 0);
-    return 2 * PI * radius;
+    double circumference = 2 * PI * radius;
+    assert(circumference >= 0);
+    return circumference;
 }
 
 /**
@@ -150,10 +152,12 @@ double circumferenceOfCircle(double radius) {
  * @param vat The VAT rate as a percentage (e.g. 19 for 19%). Must be >= 0.
  * @return The price including VAT.
  */
-double priceIncludingVAT(double price, double vat) {
+double priceIncludingVAT(double price, int vat) {
     assert(price >= 0);
     assert(vat >= 0);
-    return price + (price / 100 * vat);
+    double total = price + (price * vat / 100);
+    assert(total >= price);
+    return total;
 }
 
 /**
