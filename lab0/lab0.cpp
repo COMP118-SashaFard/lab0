@@ -69,8 +69,7 @@ int main()
             cout << "Enter number 2: ";
             user_entry_2 = readDouble();
  
-                cout << "Sum is: " << sumTwoNumbers(user_entry_1, user_entry_2) << endl << endl; // two endl for pretty reasons.
-           
+            cout << "Sum is: " << sumTwoNumbers(user_entry_1, user_entry_2) << endl << endl;
             break;
 
         case 2:
