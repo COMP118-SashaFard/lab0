@@ -25,7 +25,6 @@ double sumTwoNumbers(double num1, double num2);
 double areaOfCircle(double radius);
 double circumferenceOfCircle(double radius);
 double priceIncludingVAT(double price, double vat);
-
 int readInt();
 double readDouble();
 double readNonNegativeDouble();
@@ -151,7 +150,7 @@ double circumferenceOfCircle(double radius) {
  * @param vat The VAT rate as a percentage (e.g. 19 for 19%). Must be >= 0.
  * @return The price including VAT.
  */
-double priceIncludingVAT(double price, int vat) {
+double priceIncludingVAT(double price, double vat) {
     assert(price >= 0);
     assert(vat >= 0);
     double total = price + (price * vat / 100);
